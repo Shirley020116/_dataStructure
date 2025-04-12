@@ -7,3 +7,7 @@ https://github.com/Shirley020116/_dataStructure/blob/c1604e56851d1ba900c5d3c2cd3
 - This project analyzes cryptocurrency price trends using a multi-agent AI system built with Microsoft’s Autogen.
 - Agents are responsible for data analysis, web research, summarizing insights, and user interaction.
   
+## Homework 2 Sentiment Analysis on Cryptocurrency News
+**Path**
+
+**Content**
