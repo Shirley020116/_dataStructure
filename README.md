@@ -24,8 +24,14 @@ https://github.com/Shirley020116/_dataStructure/blob/main/HW3.py
 
 **Intro**
 The purpose of this project is to help users automatically publish daily articles (such as cryptocurrency analysis or news) on the Vocus platform. It supports generating article titles and content based on predefined report formats, increasing work efficiency and enabling automated content publishing.
+
 **Key Features**
 1. **Automated Vocus Login** - Uses Playwright to automatically log into Vocus.
 2. **Automated Title and Content Filling** - Extracts article titles and content from daily reports stored in a specified folder.
 3. **Automated Category Selection and Publishing State** - Automatically selects the article category (e.g., Web3) and sets the publishing state to public or private.
 4. **Automated Article Publishing** - Automatically clicks the "Publish" button to publish the article on Vocus.
+
+## Homework 4 
+**Intro**
+
+**Key Features**
