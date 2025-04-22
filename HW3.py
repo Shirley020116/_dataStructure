@@ -2,7 +2,7 @@ from playwright.sync_api import sync_playwright
 import os
 from dotenv import load_dotenv
 
-#HW3 針對vocus： 讀取 .env
+# 讀取 .env
 load_dotenv()
 VOCUS_EMAIL = os.getenv("VOCUS_EMAIL")
 VOCUS_PASSWORD = os.getenv("VOCUS_PASSWORD")
@@ -15,7 +15,7 @@ with sync_playwright() as p:
     page.goto("https://vocus.cc/login")
     page.wait_for_timeout(3000)
 
-    #HW3 針對vocus： 填入 email 和 password
+    #HW3 填入 email 和 password
     email_input = page.locator("input[placeholder='常用 Email'][class*='sc-bd3c07ea-1']")
     email_input.click()
     page.keyboard.type(VOCUS_EMAIL, delay=100)
@@ -24,23 +24,23 @@ with sync_playwright() as p:
     password_input.click()
     page.keyboard.type(VOCUS_PASSWORD, delay=100)
 
-    #HW3 針對vocus：點擊登入
+    #HW3點擊登入
     login_button = page.locator("button.sc-2a891af6-0.hJKOrI.sc-4f5c95a4-4.drPQJ[shape='block'][type='']")
     login_button.click()
 
-    #HW3 針對vocus：HW3 修改 等待登入
+    #HW3 等待登入
     page.wait_for_timeout(5000)
 
-    #HW3 針對vocus：HW3 針對不同 點擊「創作」
+    #HW3 點擊「創作」
     create_button = page.wait_for_selector("button:has(span:text('創作')):has(i.icon-addPost)", timeout=5000)
     create_button.click()
     page.wait_for_timeout(1000)
 
-    #HW3 針對vocus：HW3 針對vocus修正 點擊「文章」
+    #HW3 點擊「文章」
     write_article_button = page.locator("div[data-id='start-writing-button']")
     write_article_button.click()
 
-    #HW3 針對vocus：HW3 針對vocus修正內容 等待文章編輯器載入
+    #HW3 等待文章編輯器載入
     page.wait_for_timeout(3000)
 
     title = page.locator("textarea[data-id='editor-title-textarea']")
@@ -72,7 +72,7 @@ with sync_playwright() as p:
     next_button.click()
     page.wait_for_timeout(3000)
     
-    private_radio = page.locator("input#HW3 針對vocus：HW3 針對vocus：private[type='radio'][name='publishMethod'][value='private']")
+    private_radio = page.locator("input#private[type='radio'][name='publishMethod'][value='private']")
     private_radio.click()
     page.wait_for_timeout(2000)
 
